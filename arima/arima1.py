@@ -5,6 +5,7 @@ import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import datetime
+import sys
 
 ##plt.style.use('fivethirtyeight')
 
@@ -20,10 +21,10 @@ y.plot(figsize=(15, 6))
 plt.show()
 '''
 
-
+file_name = sys.argv[1]
 def parser(x):
 	return datetime.datetime.strptime(x, '%d-%m-%Y')
-y = pd.read_csv('150215.csv', header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
+y = pd.read_csv(file_name, header=0, parse_dates=[0], index_col=0, squeeze=True, date_parser=parser)
 ##y.plot()
 ##plt.show()
 '''
