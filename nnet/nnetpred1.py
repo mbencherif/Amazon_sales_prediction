@@ -13,7 +13,6 @@ warnings.filterwarnings("ignore") # specify to ignore warning messages
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 '''
-Whenever I used to run this used to give different result. 
 To have always the same result, try to propose a fixed seed for the initial weights.
 '''
 seed = 7
